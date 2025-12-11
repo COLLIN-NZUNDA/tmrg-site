@@ -53,7 +53,7 @@ export default function PortalPage() {
                 </div>
 
                 <Link 
-                  href="/contact" 
+                  href="/#contact" 
                   className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white border-2 border-white rounded hover:bg-white hover:text-brand-navy transition-colors duration-300"
                 >
                   Request Access

@@ -215,7 +215,7 @@ export default function Page() {
         <CardGrid items={researchPrograms.items} />
       </Section>
 
-      <Section>
+      <Section id="contact">
         <SectionTitle title={contact.title} />
         <SectionSubtitle subtitle={contact.subtitle} />
         <div className="section-narrow grid gap-8 lg:grid-cols-2 lg:items-start">

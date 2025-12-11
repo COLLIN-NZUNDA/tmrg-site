@@ -2,13 +2,16 @@ import clsx from "clsx";
 
 export function Section({
   children,
-  background
+  background,
+  id
 }: {
   children: React.ReactNode;
   background?: "alt";
+  id?: string;
 }) {
   return (
     <section
+      id={id}
       className={clsx("section", background === "alt" && "bg-brand-light/60")}
     >
       <div className="section-wide space-y-10">{children}</div>
