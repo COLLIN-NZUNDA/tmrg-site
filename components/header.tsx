@@ -21,25 +21,25 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-8">
           <Link
-            href="#about"
+            href="/about"
             className="text-sm font-medium text-gray-700 hover:text-brand-teal"
           >
             About Us
           </Link>
           <Link
-            href="#patients"
+            href="/patients"
             className="text-sm font-medium text-gray-700 hover:text-brand-teal"
           >
             For Myeloma Patients
           </Link>
           <Link
-            href="#research"
+            href="/research"
             className="text-sm font-medium text-gray-700 hover:text-brand-teal"
           >
             Research
           </Link>
           <Link
-            href="#news"
+            href="/news"
             className="text-sm font-medium text-gray-700 hover:text-brand-teal"
           >
             News & Events
