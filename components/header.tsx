@@ -45,7 +45,7 @@ export function Header() {
             News & Events
           </Link>
           <Link
-            href="#portal"
+            href="/portal"
             className="text-sm font-medium text-gray-700 hover:text-brand-teal"
           >
             Research Portal
