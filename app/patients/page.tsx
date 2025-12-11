@@ -3,7 +3,7 @@ import { Section, SectionTitle, SectionSubtitle } from "@/components/section";
 import { CardGrid } from "@/components/card-grid";
 
 export default function PatientsPage() {
-  // Mock data for webinars since it's not in site.ts
+  // Mock data for webinars
   const webinars = [
     {
       title: "Understanding Multiple Myeloma",
