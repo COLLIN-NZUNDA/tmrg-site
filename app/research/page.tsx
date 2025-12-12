@@ -27,9 +27,39 @@ export default function ResearchPage() {
       </div>
 
       <Section>
-        <SectionTitle title="Translational Research" />
-        <SectionSubtitle subtitle={researchPrograms.subtitle} />
-        <CardGrid items={researchPrograms.items} />
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          {/* Left Column: Text Content */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-800 md:text-4xl">
+                Translational Research
+              </h2>
+              <div className="mt-4 h-1 w-20 bg-red-600 rounded-full" />
+            </div>
+            
+            <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
+              <p>
+                TMRG recognizes the importance of laboratory research to better understand myeloma biology. We are working with multiple centres across Tanzania performing dynamic translational research. Our long-term goal is to create a National Biobank of bio-specimens (blood and bone marrow) to complement our clinical trials. We envision:
+              </p>
+              <ul className="space-y-4 list-disc pl-5 marker:text-brand-teal">
+                <li>
+                  Development of a streamlined platform for sample acquisition, transport, and storage,
+                </li>
+                <li>
+                  Direct advancement of myeloma research by linking clinical outcomes with laboratory discoveries.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Right Column: Image */}
+          <div className="relative h-[400px] w-full overflow-hidden rounded-xl shadow-xl">
+            <div 
+              className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"
+              aria-label="Researchers in a lab"
+            />
+          </div>
+        </div>
       </Section>
 
       <Section background="alt">
