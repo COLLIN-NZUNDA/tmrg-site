@@ -17,6 +17,7 @@ import { CardGrid } from "@/components/card-grid";
 import { ListWithIcons } from "@/components/list-with-icons";
 import { ContactForm } from "@/components/contact-form";
 import { BadgeRow } from "@/components/badge-row";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function Page() {
   return (
@@ -43,21 +44,25 @@ export default function Page() {
 
         {/* Content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4 pt-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-lg max-w-6xl leading-tight">
-            ADVANCING MYELOMA RESEARCH
-            <br />
-            <span className="text-brand-teal">ACROSS TANZANIA</span>
-          </h1>
-          <p className="mt-8 text-xl md:text-2xl text-white/90 font-light drop-shadow-md max-w-3xl">
-            Improving diagnosis, treatment, and outcomes.
-          </p>
+          <FadeIn direction="up" delay={0.2}>
+            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-lg max-w-6xl leading-tight">
+              ADVANCING MYELOMA RESEARCH
+              <br />
+              <span className="text-brand-teal">ACROSS TANZANIA</span>
+            </h1>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.4}>
+            <p className="mt-8 text-xl md:text-2xl text-white/90 font-light drop-shadow-md max-w-3xl">
+              Improving diagnosis, treatment, and outcomes.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
       {/* 3-Column Feature Section */}
-      <section className="grid md:grid-cols-3">
+      <StaggerContainer className="grid md:grid-cols-3">
         {/* Feature 1: Research */}
-        <div className="relative h-80 group overflow-hidden">
+        <StaggerItem className="relative h-80 group overflow-hidden">
           <div className="absolute inset-0 bg-gray-900">
             {/* Placeholder for image */}
             <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-60 group-hover:opacity-40 transition duration-500"></div>
@@ -82,10 +87,10 @@ export default function Page() {
               Leading clinical trials and registry studies.
             </p>
           </div>
-        </div>
+        </StaggerItem>
 
         {/* Feature 2: Education */}
-        <div className="relative h-80 group overflow-hidden">
+        <StaggerItem className="relative h-80 group overflow-hidden">
           <div className="absolute inset-0 bg-brand-navy">
             <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-60 group-hover:opacity-40 transition duration-500"></div>
           </div>
@@ -109,10 +114,10 @@ export default function Page() {
               Training clinicians and building capacity.
             </p>
           </div>
-        </div>
+        </StaggerItem>
 
         {/* Feature 3: Advocacy */}
-        <div className="relative h-80 group overflow-hidden">
+        <StaggerItem className="relative h-80 group overflow-hidden">
           <div className="absolute inset-0 bg-gray-800">
             <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-60 group-hover:opacity-40 transition duration-500"></div>
           </div>
@@ -136,77 +141,81 @@ export default function Page() {
               Improving access to care and treatment.
             </p>
           </div>
-        </div>
-      </section>
+        </StaggerItem>
+      </StaggerContainer>
 
       {/* Stats Section */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-600 mb-16">
-            Clinical Trials
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-            <div>
+          <FadeIn direction="up">
+            <h2 className="text-3xl font-bold text-gray-600 mb-16">
+              Clinical Trials
+            </h2>
+          </FadeIn>
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+            <StaggerItem>
               <div className="text-6xl font-bold text-brand-navy mb-2">9</div>
               <div className="text-gray-500 uppercase tracking-wide text-sm">
                 Trials
               </div>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem>
               <div className="text-6xl font-bold text-brand-navy mb-2">21</div>
               <div className="text-gray-500 uppercase tracking-wide text-sm">
                 Sites
               </div>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem>
               <div className="text-6xl font-bold text-brand-navy mb-2">
                 350+
               </div>
               <div className="text-gray-500 uppercase tracking-wide text-sm">
                 Patients Enrolled
               </div>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem>
               <div className="text-6xl font-bold text-brand-navy mb-2">
                 3,303
               </div>
               <div className="text-gray-500 uppercase tracking-wide text-sm">
                 Cycles of Treatment
               </div>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
 
-          <h2 className="text-3xl font-bold text-gray-600 mb-16">
-            Real-World Evidence
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
+          <FadeIn direction="up">
+            <h2 className="text-3xl font-bold text-gray-600 mb-16">
+              Real-World Evidence
+            </h2>
+          </FadeIn>
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <StaggerItem>
               <div className="text-6xl font-bold text-brand-navy mb-2">16</div>
               <div className="text-gray-500 uppercase tracking-wide text-sm">
                 Participating Centres
               </div>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem>
               <div className="text-6xl font-bold text-brand-navy mb-2">
                 8,387
               </div>
               <div className="text-gray-500 uppercase tracking-wide text-sm">
                 Patients Enrolled
               </div>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem>
               <div className="text-6xl font-bold text-brand-navy mb-2">5</div>
               <div className="text-gray-500 uppercase tracking-wide text-sm">
                 Manuscripts Published
               </div>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem>
               <div className="text-6xl font-bold text-brand-navy mb-2">13</div>
               <div className="text-gray-500 uppercase tracking-wide text-sm">
                 Abstracts Published
               </div>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
