@@ -25,19 +25,14 @@ export default function Page() {
       {/* Hero Section - Redesigned with Video Background */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/853822/853822-hd_1920_1080_25fps.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          src="https://www.kapwing.com/e/693c5c989c923dd91d74e9b6"
+          allow="autoplay; gyroscope;"
+          allowFullScreen
+          referrerPolicy="strict-origin"
+          className="absolute inset-0 h-full w-full border-0"
+          title="Embedded content made on Kapwing"
+        />
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-brand-navy/30 mix-blend-multiply" />
