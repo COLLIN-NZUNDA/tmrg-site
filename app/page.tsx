@@ -33,7 +33,7 @@ export default function Page() {
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-scientists-working-in-a-laboratory-4538-large.mp4"
+            src="https://videos.pexels.com/video-files/853822/853822-hd_1920_1080_25fps.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
