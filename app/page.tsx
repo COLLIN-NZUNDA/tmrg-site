@@ -43,12 +43,12 @@ export default function Page() {
 
         {/* Content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4 pt-20">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight drop-shadow-lg max-w-6xl leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-lg max-w-6xl leading-tight">
             ADVANCING MYELOMA RESEARCH
             <br />
             <span className="text-brand-teal">ACROSS TANZANIA</span>
           </h1>
-          <p className="mt-8 text-2xl md:text-3xl text-white/90 font-light drop-shadow-md max-w-3xl">
+          <p className="mt-8 text-xl md:text-2xl text-white/90 font-light drop-shadow-md max-w-3xl">
             Improving diagnosis, treatment, and outcomes.
           </p>
         </div>
