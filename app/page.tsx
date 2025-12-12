@@ -21,24 +21,36 @@ import { BadgeRow } from "@/components/badge-row";
 export default function Page() {
   return (
     <main>
-      {/* Hero Section - Redesigned to match CMRG style */}
-      <section className="bg-brand-navy text-white py-24 md:py-32 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+      {/* Hero Section - Redesigned with Video Background */}
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source
+            src="https://assets.mixkit.co/videos/preview/mixkit-scientists-working-in-a-laboratory-4538-large.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-brand-navy/30 mix-blend-multiply" />
+
+        {/* Content */}
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4 pt-20">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight drop-shadow-lg max-w-6xl leading-tight">
             ADVANCING MYELOMA RESEARCH
             <br />
             <span className="text-brand-teal">ACROSS TANZANIA</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 font-light">
+          <p className="mt-8 text-2xl md:text-3xl text-white/90 font-light drop-shadow-md max-w-3xl">
             Improving diagnosis, treatment, and outcomes.
           </p>
-          <a
-            href="#about"
-            className="inline-block bg-brand-teal hover:bg-white hover:text-brand-navy text-white font-bold py-4 px-8 rounded transition duration-300"
-          >
-            Find out more
-          </a>
         </div>
       </section>
 
