@@ -20,8 +20,35 @@ export default function AboutPage() {
           <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight drop-shadow-lg">
             About Us
           </h1>
-          <p className="mt-6 text-xl text-white/90 max-w-2xl font-light drop-shadow-md">
-            Meet the team dedicated to improving myeloma care in Tanzania.
+        </div>
+      </div>
+
+      {/* Intro Text with Arrow */}
+      <div className="relative bg-white px-4 pb-16 pt-12 text-center">
+        {/* Arrow Indicator */}
+        <div className="absolute -top-6 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-gray-100">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="h-6 w-6 text-gray-400"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+
+        <div className="mx-auto max-w-4xl">
+          <p className="text-xl leading-relaxed text-gray-600 md:text-2xl font-light">
+            TMRG is the only organization dedicated solely to myeloma research in
+            Tanzania. This uniquely positions us to provide infrastructure and
+            expertise in prospective and retrospective studies, and
+            administration across Tanzania.
           </p>
         </div>
       </div>
