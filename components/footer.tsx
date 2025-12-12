@@ -7,12 +7,12 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Logo & About */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-navy text-white font-bold">
                 TMRG
               </div>
               <span className="text-lg font-bold text-brand-navy">TMRG</span>
-            </div>
+            </Link>
             <p className="text-sm leading-relaxed">
               TMRG positions itself at the heart of myeloma research in Tanzania
               with the creation of national clinical trials, database and

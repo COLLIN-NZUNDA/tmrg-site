@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           {/* Logo Placeholder */}
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-navy text-white font-bold text-xl">
             TMRG
@@ -17,7 +17,7 @@ export function Header() {
               Tanzanian Myeloma Research Group
             </span>
           </div>
-        </div>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8">
           <Link
