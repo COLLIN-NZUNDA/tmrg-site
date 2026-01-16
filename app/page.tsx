@@ -22,34 +22,113 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
 export default function Page() {
   return (
     <main>
-      {/* Hero Section - Redesigned with Video Background */}
-      <section className="relative h-screen w-full overflow-hidden">
-        {/* Video Background */}
-        <iframe
-          src="https://www.kapwing.com/e/693c5c989c923dd91d74e9b6"
-          allow="autoplay; gyroscope;"
-          allowFullScreen
-          referrerPolicy="strict-origin"
-          className="absolute inset-0 h-full w-full border-0"
-          title="Embedded content made on Kapwing"
+      {/* Hero Section - Static Background Image */}
+      <section className="relative min-h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop')" }}
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-brand-navy/30 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-black/40" />
 
         {/* Content */}
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4 pt-20">
+        <div className="relative z-10 flex h-full min-h-screen flex-col items-center justify-center text-center px-4 pt-20 pb-20">
           <FadeIn direction="up" delay={0.2}>
-            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-lg max-w-6xl leading-tight">
-              ADVANCING MYELOMA RESEARCH
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-lg max-w-5xl leading-tight uppercase">
+              Launching Myeloma Research
               <br />
-              <span className="text-brand-teal">ACROSS TANZANIA</span>
+              Across Tanzania
             </h1>
           </FadeIn>
-          <FadeIn direction="up" delay={0.4}>
-            <p className="mt-8 text-xl md:text-2xl text-white/90 font-light drop-shadow-md max-w-3xl">
-              Improving diagnosis, treatment, and outcomes.
-            </p>
+          
+          {/* Three Pillars */}
+          <FadeIn direction="up" delay={0.4} fullWidth>
+            <div className="mt-16 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Pillar 1: Better Treatments */}
+              <div className="flex flex-col items-center text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-16 h-16 mb-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"
+                  />
+                </svg>
+                <p className="text-lg font-light leading-relaxed">
+                  Develops better treatments for extending life of myeloma patients.
+                </p>
+              </div>
+
+              {/* Pillar 2: Quality of Life */}
+              <div className="flex flex-col items-center text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-16 h-16 mb-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
+                  />
+                </svg>
+                <p className="text-lg font-light leading-relaxed">
+                  Enhances the quality of life for those living with myeloma and other related disorders.
+                </p>
+              </div>
+
+              {/* Pillar 3: Finding a Cure */}
+              <div className="flex flex-col items-center text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-16 h-16 mb-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"
+                  />
+                </svg>
+                <p className="text-lg font-light leading-relaxed">
+                  Works to find a cure for these diseases and other plasma cell disorders.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Scroll Indicator */}
+          <FadeIn direction="up" delay={0.6}>
+            <div className="mt-16 animate-bounce">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="white"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </div>
           </FadeIn>
         </div>
       </section>
